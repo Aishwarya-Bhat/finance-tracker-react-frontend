@@ -1,0 +1,135 @@
+.history-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 40px 20px;
+}
+
+.history-header {
+  display: flex;
+  align-items: center;
+  margin-bottom: 40px;
+  position: relative;
+}
+
+.history-header h1 {
+  flex: 1;
+  text-align: center;
+  color: #2c3e50;
+  margin: 0;
+  font-size: 2.5rem;
+}
+
+.back-to-dashboard {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 20px;
+  background-color: #0a9d8f;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 15px;
+  font-weight: 500;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 4px rgba(10, 157, 143, 0.2);
+}
+
+.back-to-dashboard:hover {
+  background-color: #088f82;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(10, 157, 143, 0.3);
+}
+
+.history-table-container {
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 4px 15px rgba(10, 157, 143, 0.2);
+  overflow: hidden;
+}
+
+.history-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.history-table th,
+.history-table td {
+  padding: 15px;
+  text-align: left;
+  border-bottom: 1px solid #dee2e6;
+}
+
+.history-table th {
+  background-color: #f8f9fa;
+  font-weight: 600;
+  color: #2c3e50;
+}
+
+.action-type {
+  font-weight: 500;
+  padding: 6px 12px;
+  border-radius: 4px;
+  text-align: center;
+}
+
+.action-type.insert {
+  background-color: #d4edda;
+  color: #155724;
+}
+
+.action-type.update {
+  background-color: #fff3cd;
+  color: #856404;
+}
+
+.action-type.delete {
+  background-color: #f8d7da;
+  color: #721c24;
+}
+
+.loading {
+  text-align: center;
+  padding: 20px;
+  color: #6c757d;
+}
+
+.error {
+  color: #dc3545;
+  text-align: center;
+  padding: 20px;
+  background-color: #f8d7da;
+  border-radius: 8px;
+  margin: 20px;
+}
+
+@media (max-width: 768px) {
+  .history-header {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .back-to-dashboard {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .history-table th,
+  .history-table td {
+    padding: 10px;
+    font-size: 14px;
+  }
+}
+
+.clickable-row {
+  cursor: pointer;
+  transition: all 0.3s ease;
+  border: 2px solid transparent;
+}
+
+.clickable-row:hover {
+  background-color: #f8f9fa;
+  border: 2px solid #0a9d8f;
+  box-shadow: 0 4px 15px rgba(10, 157, 143, 0.2);
+  transform: translateY(-2px);
+} 

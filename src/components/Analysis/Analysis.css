@@ -1,0 +1,93 @@
+.analysis-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 40px 20px;
+}
+
+.analysis-header {
+  display: flex;
+  align-items: center;
+  margin-bottom: 40px;
+  position: relative;
+}
+
+.analysis-header h1 {
+  flex: 1;
+  text-align: center;
+  color: #2c3e50;
+  margin: 0;
+  font-size: 2.5rem;
+}
+
+.back-to-dashboard {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 20px;
+  background-color: #0a9d8f;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 15px;
+  font-weight: 500;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 4px rgba(10, 157, 143, 0.2);
+}
+
+.back-to-dashboard:hover {
+  background-color: #088f82;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(10, 157, 143, 0.3);
+}
+
+.back-to-dashboard:active {
+  transform: translateY(0);
+}
+
+.analysis-content {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 30px;
+  padding: 20px 0;
+}
+
+.analysis-card {
+  background: white;
+  padding: 30px;
+  border-radius: 15px;
+  box-shadow: 0 4px 15px rgba(10, 157, 143, 0.2);
+  transition: all 0.3s ease;
+}
+
+.analysis-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 25px rgba(10, 157, 143, 0.3);
+}
+
+.analysis-card h2 {
+  color: #2c3e50;
+  margin-top: 0;
+  margin-bottom: 20px;
+  font-size: 1.5rem;
+}
+
+@media (max-width: 768px) {
+  .analysis-header {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .analysis-header h1 {
+    font-size: 2rem;
+  }
+
+  .back-to-dashboard {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .analysis-content {
+    grid-template-columns: 1fr;
+  }
+} 

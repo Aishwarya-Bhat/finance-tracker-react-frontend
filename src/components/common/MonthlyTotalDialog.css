@@ -1,0 +1,161 @@
+.monthly-total-dialog-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+  animation: fadeIn 0.2s ease-out;
+}
+
+.monthly-total-dialog {
+  background: white;
+  border-radius: 15px;
+  padding: 30px;
+  width: 90%;
+  max-width: 400px;
+  position: relative;
+  box-shadow: 0 4px 20px rgba(10, 157, 143, 0.2);
+  animation: slideIn 0.3s ease-out;
+}
+
+.close-button {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  background: none;
+  border: none;
+  color: #6c757d;
+  cursor: pointer;
+  padding: 5px;
+  transition: all 0.3s ease;
+}
+
+.close-button:hover {
+  color: #0a9d8f;
+  transform: rotate(90deg);
+}
+
+.dialog-content {
+  text-align: center;
+}
+
+.dialog-content h2 {
+  color: #2c3e50;
+  margin: 0 0 20px 0;
+  font-size: 24px;
+}
+
+.period-selector {
+  margin-bottom: 20px;
+  padding: 20px;
+  background: #f8f9fa;
+  border-radius: 8px;
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+}
+
+.select-group {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  min-width: 140px;
+}
+
+.select-group label {
+  color: #6c757d;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.month-select,
+.year-select {
+  padding: 8px 12px;
+  border: 2px solid #e9ecef;
+  border-radius: 8px;
+  font-size: 15px;
+  background-color: white;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  width: 100%;
+}
+
+.month-select:focus,
+.year-select:focus {
+  outline: none;
+  border-color: #0a9d8f;
+  box-shadow: 0 0 0 3px rgba(10, 157, 143, 0.1);
+}
+
+.total-amount {
+  padding: 30px;
+  background: #e9fff5;
+  border-radius: 8px;
+  border: 2px solid #0a9d8f;
+}
+
+.amount-label {
+  color: #0a9d8f;
+  font-size: 20px;
+  display: block;
+  margin-bottom: 10px;
+  font-weight: 500;
+}
+
+.amount-value {
+  color: #0a9d8f;
+  font-size: 80px;
+  font-weight: 700;
+  font-family: monospace;
+  line-height: 1.2;
+  margin-top: 15px;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.amount-value.expense {
+  color: #dc3545;
+}
+
+.amount-value.income {
+  color: #0a9d8f;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (max-width: 480px) {
+  .period-selector {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .select-group {
+    width: 100%;
+  }
+
+  .amount-value {
+    font-size: 100px;
+  }
+
+  .amount-label {
+    font-size: 18px;
+  }
+} 

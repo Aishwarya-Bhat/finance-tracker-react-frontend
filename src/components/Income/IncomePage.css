@@ -1,0 +1,44 @@
+.income-page {
+  max-width: 800px;
+  margin: 40px auto;
+  padding: 0 20px;
+}
+
+.income-page-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 30px;
+}
+
+.income-page-header h2 {
+  color: #2c3e50;
+  margin: 0;
+}
+
+.back-to-list-button {
+  padding: 8px 16px;
+  background-color: #6c757d;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: all 0.3s ease;
+}
+
+.back-to-list-button:hover {
+  background-color: #5a6268;
+}
+
+@media (max-width: 768px) {
+  .income-page-header {
+    flex-direction: column;
+    gap: 15px;
+    text-align: center;
+  }
+
+  .back-to-list-button {
+    width: 100%;
+  }
+} 

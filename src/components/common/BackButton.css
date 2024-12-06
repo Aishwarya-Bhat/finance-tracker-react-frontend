@@ -1,0 +1,35 @@
+.back-button {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 20px;
+  background-color: #0a9d8f;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 15px;
+  font-weight: 500;
+  transition: all 0.3s ease;
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  box-shadow: 0 2px 4px rgba(10, 157, 143, 0.2);
+}
+
+.back-button:hover {
+  background-color: #088f82;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(10, 157, 143, 0.3);
+}
+
+.back-button:active {
+  transform: translateY(0);
+}
+
+@media (max-width: 768px) {
+  .back-button {
+    position: static;
+    margin-bottom: 20px;
+  }
+} 

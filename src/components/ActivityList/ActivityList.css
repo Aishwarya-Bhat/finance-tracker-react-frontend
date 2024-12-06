@@ -1,0 +1,25 @@
+.activity-list {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .activity-item {
+    display: flex;
+    justify-content: space-between;
+    padding: 8px 10px;
+    border-bottom: 1px solid #ddd;
+  }
+  
+  .activity-item:last-child {
+    border-bottom: none;
+  }
+  
+  .expense {
+    color: #ff4d4d;
+  }
+  
+  .income {
+    color: #0a9d8f;
+  }
+  
